@@ -1,8 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installing / Getting started
 
-In the project directory, you can run:
+Set of commands required to run the project are:
+`npm i`
+`npm start`
 
 ### `npm start`
 
