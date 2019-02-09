@@ -24,10 +24,10 @@ class Stocks extends Component {
 
 
     handleData(data) {
-        var that = this;
+        let that = this;
         let result = JSON.parse(data);
         result.forEach(function (res) {
-            var classname = !!that.state.data[res[0]] ? (that.state.data[res[0]].price > res[1] ? "lower" : that.state.data[res[0]].price < res[1] ? "higher" : "") : "initial"
+            let classname = !!that.state.data[res[0]] ? (that.state.data[res[0]].price > res[1] ? "lower" : that.state.data[res[0]].price < res[1] ? "higher" : "") : "initial"
             that.state.data[res[0]] = {
                 price: res[1],
                 classname: classname,
@@ -43,7 +43,7 @@ class Stocks extends Component {
     }
 
     render() {
-        var that = this;
+        let that = this;
         return (
             <div className="stocks">
                 <Websocket url='ws://stocks.mnet.website' onMessage={this.handleData.bind(this)} />
