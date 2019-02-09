@@ -23,6 +23,6 @@ This app has following features:
 ### Deploying / Publishing
 This project is deployed on heroku and can be accessed via the link: http://tech-assignment.herokuapp.com/
 
-The project is deployed via master branch and continous deployments are done via the master branch.
+The project is deployed via master branch and continous deployments are done same branch.
 
 
