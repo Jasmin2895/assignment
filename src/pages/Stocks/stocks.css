@@ -1,72 +1,75 @@
-@media screen and (min-width:600px) {
-	.higher {
-		background: #77ff77;
-		border-style:solid; 
-		 border-width:1px; 
-		 border-color:#333333; 
-		 padding:10px;
-	}
-	
-	.lower {
-		background: #f9b3b3;
-		border-style:solid; 
-		 border-width:1px; 
-		 border-color:#333333; 
-		 padding:10px;
-	}
-	
-	.initial {
-		background: #fff;
-		border-style:solid; 
-		 border-width:1px; 
-		 border-color:#333333; 
-		 padding:10px;
-	}
-	table.one {
-		border-collapse:collapse;
-		padding:20px;
-		 margin-top: 20px;
-		 margin-left: 20px;
-		 width:100%;
-		 height: auto;
-		 text-align: center;
-		}
-		 
-		  td.b {
-			 border-style:solid; 
-			 border-width:1px; 
-			 border-color:#333333; 
-			 padding:10px;
-		  }
-	
+@media screen and (max-width:600px) {
 	.container{
-	display: flex;
-	justify-content: center;
+		flex-direction: column;
+		}
+  }
+  .higher {
+	background: #77ff77;
+	border-style:solid; 
+	 border-width:1px; 
+	 border-color:#333333; 
+	 padding:10px;
+}
+
+.lower {
+	background: #f9b3b3;
+	border-style:solid; 
+	 border-width:1px; 
+	 border-color:#333333; 
+	 padding:10px;
+}
+
+.initial {
+	background: #fff;
+	border-style:solid; 
+	 border-width:1px; 
+	 border-color:#333333; 
+	 padding:10px;
+}
+table.one {
+	border-collapse:collapse;
+	padding:20px;
+	 margin-top: 20px;
+	 margin-left: 20px;
+	 width:100%;
+	 height: auto;
+	 text-align: center;
+	}
+	 
+	  td.b {
+		 border-style:solid; 
+		 border-width:1px; 
+		 border-color:#333333; 
+		 padding:10px;
+	  }
+
+.container{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+position: relative;
+margin:0 auto;
+width:100%;
+height: auto;
+}
+
+.graph{
 	margin-top: 20px;
-	position: relative;
-	margin:0 auto;
+	padding: 20px;
+}
+.parts{
 	width:100%;
 	height: auto;
-	}
-	
-	.graph{
-		margin-top: 20px;
-		padding: 20px;
-	}
-	.parts{
-		width:100%;
-		height: auto;
-	}
-	th.header{
-		background-color: #565656;
-		color: white;
-		font-size: 35px;
-		margin: 0;
-		font-family: Tahoma, Geneva, sans-serif;
-	}
-	style  {
-		top: 0;
-		left: 350;
-	};
-  }
+}
+th.header{
+	background-color: #565656;
+	color: white;
+	font-size: 35px;
+	margin: 0;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+style  {
+	top: 0;
+	left: 350;
+};
 
