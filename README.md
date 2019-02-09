@@ -17,12 +17,12 @@ gh-pages
 
 ### Features
 This app has following features:
-1. A table which showing real time stock data.
+1. A table showing real time stock data.
 2. A graph showing real time stocks data.
 
 ### Deploying / Publishing
 This project is deployed on heroku and can be accessed via the link: http://tech-assignment.herokuapp.com/
 
-The project is deployed via master branch and continous deployments are done same branch.
+The project is deployed via master branch and continous deployments are done via same branch.
 
 
