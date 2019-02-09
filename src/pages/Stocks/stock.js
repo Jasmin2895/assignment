@@ -28,8 +28,9 @@ class Stocks extends Component {
         let result = JSON.parse(data);
         result.forEach(function (res) {
             let classname = !!that.state.data[res[0]] ? (that.state.data[res[0]].price > res[1] ? "lower" : that.state.data[res[0]].price < res[1] ? "higher" : "") : "initial"
+            
             that.state.data[res[0]] = {
-                price: res[1],
+                price: res[1].toFixed(3),
                 classname: classname,
                 updated_at: moment().startOf('hour').fromNow()
             }
@@ -48,13 +49,13 @@ class Stocks extends Component {
             <div className="stocks">
                 <Websocket url='ws://stocks.mnet.website' onMessage={this.handleData.bind(this)} />
                 <div className="container">
-                    <div className="table-responsive">
+                    <div className="parts">
                         <table className="one" >
                             <thead>
                                 <tr>
-                                    <th className="c">Ticker {Object.keys(this.state.data).length}</th>
-                                    <th className="c">Price </th>
-                                    <th className="c">Last Update</th>
+                                    <th className="header">Ticker</th>
+                                    <th className="header">Price </th>
+                                    <th className="header">Last Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,15 +77,15 @@ class Stocks extends Component {
                         </table>
                     </div>
                     <div className="graph">
-                    <div> Graph Data </div>
-                    <AreaChart width={600} height={400} data={this.state.graphData}
-                        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Area type='monotone' dataKey='price' stroke='#8884d8' fill='#8884d8' />
-                    </AreaChart>
+                        <div> Graph Data </div>
+                        <AreaChart width={600} height={400} data={this.state.graphData}
+                            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Area type='monotone' dataKey='price' stroke='#8884d8' fill='#8884d8' />
+                        </AreaChart>
                     </div>
                 </div>
             </div>
